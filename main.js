@@ -57,7 +57,7 @@ function calculateCustom(amount,people,percentage){
         const customTotal = totalValue.toFixed(2)
         totalEl.innerHTML = `$${customTotal}`
 }
-
+})
 function reset() {
     tipAmountEl.innerHTML = "$0.00"
     totalEl.innerHTML = "$0.00"
