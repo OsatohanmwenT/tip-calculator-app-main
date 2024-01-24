@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <h3>S P L I <br>T T E R</h3>
+  <div class="wrapper">
+  <div class="container">
+    <form id="cal">
+      <div class="input-amount">
+        <label for="calculator">Bill</label>
+        <input id="Tip" type="text" placeholder="0">
+      </div>
+      <div class="percent">
+        <label>Select Tip %</label>
+        <div class="tip-percent">
+          <button type="button" class="add" id="five" value=0.05>5%</button>
+          <button type="button" class="add" id="ten" value=0.1>10%</button>
+          <button type="button" class="add" id="fifteen"value=0.15>15%</button>
+          <button type="button" class="add" id="twenty" value=0.2>25%</button>
+          <button type="button" class="add" id="fifty" value=0.5>50%</button>
+          <input id="custom" placeholder="Custom">
+        </div>
+      </div>
+        <div class="people">
+          <label for="people">Number of People</label>
+          <span class="error-text"></span>
+          <input type="text" placeholder="0" id="people">
+        </div>
+    </form>
+    <div class="result">
+      <div class="tips">
+      <div class="amount">
+        <div class="pre">
+          Tip Amount
+          <span>/ person</span>
+        </div>
+        <div class="main" id="tipAmount">$0.00</div>
+      </div>
+      <div class="amount">
+        <div class="pre">
+          Total
+          <span>/ person</span>
+        </div>
+        <div class="main" id="total">$0.00</div>
+      </div>
+    </div>
+      <input type="button" class="btn" value="Reset" id="resetBtn">
+    </div>
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

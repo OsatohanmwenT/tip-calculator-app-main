@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Light-red: hsl(0, 100%, 67%);
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Light-grayish-cyan);
+    margin: 0;
+    display: grid;
+    place-content: center;
+}
+h3{
+    text-align: center;
+    margin-top: 0;
+    color: var(--Dark-grayish-cyan);
+}
+button{
+    border: none;
+}
+input{
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+    font-size: 1rem;
+    text-align: right;
+}
+.error:focus{
+    outline-color: var(--Light-red);
+}
+input::placeholder{
+    color: var(--Grayish-cyan);
+}
+label{
+     color: var(--Very-dark-cyan);
+     font-weight: 700;
+}
+input:focus{
+    outline-color: var(--Strong-cyan);
+}
+#Tip{
+    background: url(images/icon-dollar.svg) center left 10px no-repeat var(--Very-light-grayish-cyan);
+}
+#people{
+    background: url(images/icon-person.svg) center left 10px no-repeat var(--Very-light-grayish-cyan);
+}
+.wrapper{
+    display: flex;
+    place-content: center;
+}
+.container{
+    padding: 30px;
+    border-radius: 20px;
+    gap: 20px;
+    background-color: var(--White);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 700px;
+}
+.input-amount{
+    display: flex;
+    flex-direction: column;
+}
+.container .percent{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.percent .tip-percent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.percent .tip-percent .add{
+    padding: 10px 30px;
+    color: var(--White);
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: var(--Very-dark-cyan);
+}
+.active{
+    background-color: var(--Strong-cyan);
+}
+.percent .tip-percent #custom{
+    background-color: var(--Very-light-grayish-cyan);
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 89px;
+}
+.percent .tip-percent #custom::placeholder{
+    color: var(--Very-dark-cyan);
+}
+.people{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result{
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.tips{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.result .amount{
+    display: flex;
+    justify-content: space-between;
+}
+.error-text{
+    color: var(--Light-red);
+}
+.result .amount .pre{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.result .amount .pre span{
+    color: var(--Grayish-cyan);
+    font-size: 0.7rem;
+}
+.result .amount .main{
+    color: var(--Strong-cyan);
+    font-size: 1.6rem;
+}
+.btn{
+    text-align: center;
+    background-color: var(--Strong-cyan);
+    opacity: 1;
+}
+.btn-active{
+    opacity: 1;
+}
+@media (max-width:500px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        max-height: 680px;
+    }
+    .result{
+        max-height: 300px;
+    }
+}
+@media (max-width:400px) {
+    .result{
+        max-height: 220px;
+    }
+}
