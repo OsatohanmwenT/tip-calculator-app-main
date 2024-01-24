@@ -16,17 +16,8 @@ resetBtn.addEventListener("click", () => {
     reset()
 })
 function calculate(amount,people,percentage){
-    if (people === "" || 0){
         people = 1
         const tipValue = amount*percentage/people
-        const round = tipValue.toFixed(2)
-        tipAmountEl.innerHTML = `$${round}`
-
-        const totalValue = (amount/people) + tipValue
-        const roundT = totalValue.toFixed(2)
-        totalEl.innerHTML = `$${roundT}`
-    }else{
-    const tipValue = amount*percentage/people
         const round = tipValue.toFixed(2)
         tipAmountEl.innerHTML = `$${round}`
 
@@ -39,8 +30,6 @@ customInput.addEventListener("keyup", () => {
 
 })
 function calculateCustom(amount,people,percentage){
-    if (people === "" || 0){
-        people = 1
         const tipValue = amount*(percentage/100)/people
         const customRound = tipValue.toFixed(2)
         tipAmountEl.innerHTML = `$${customRound}`
@@ -48,15 +37,6 @@ function calculateCustom(amount,people,percentage){
         const totalValue = (amount/people) + tipValue
         const customTotal = totalValue.toFixed(2)
         totalEl.innerHTML = `$${customTotal}`
-    }else{
-        const tipValue = amount*(percentage/100)/people
-        const customRound = tipValue.toFixed(2)
-        tipAmountEl.innerHTML = `$${customRound}`
-
-        const totalValue = (amount/people) + tipValue
-        const customTotal = totalValue.toFixed(2)
-        totalEl.innerHTML = `$${customTotal}`
-}
 }
 function reset() {
     tipAmountEl.innerHTML = "$0.00"
