@@ -16,7 +16,6 @@ resetBtn.addEventListener("click", () => {
     reset()
 })
 function calculate(amount,people,percentage){
-        people = 1
         const tipValue = amount*percentage/people
         const round = tipValue.toFixed(2)
         tipAmountEl.innerHTML = `$${round}`
